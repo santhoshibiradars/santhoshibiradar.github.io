@@ -1,205 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santhoshi Biradar | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f1624;
-      color: #fff;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 100vh;
-      background-color: #1e2a38;
-      padding-top: 40px;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 20px 0;
-      text-align: center;
-    }
-    nav ul li a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00dfd8;
-    }
-    .main {
-      margin-left: 240px;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 3rem;
-      background: linear-gradient(to right, #00dfd8, #007cf0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    h2 {
-      color: #00dfd8;
-      margin-top: 60px;
-    }
-    .card {
-      background-color: #1e2a38;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .skills-icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .skills-icons img {
-      width: 40px;
-      height: 40px;
-    }
-    .buttons a {
-      display: inline-block;
-      background: #00dfd8;
-      color: #0f1624;
-      padding: 8px 15px;
-      border-radius: 5px;
-      margin-right: 10px;
-      margin-top: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      color: #ccc;
-    }
-    .typing {
-      font-size: 1.2rem;
-      color: #ccc;
-      height: 25px;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const phrases = ["Project Manager", "Business Analyst", "Data Enthusiast"];
-      let i = 0, j = 0, currentPhrase = [], isDeleting = false;
-      const typingElement = document.getElementById("typing");
-      function loop() {
-        typingElement.innerHTML = currentPhrase.join("");
-        if (!isDeleting && j <= phrases[i].length) {
-          currentPhrase.push(phrases[i][j]);
-          j++;
-        }
-        if (isDeleting && j > 0) {
-          currentPhrase.pop();
-          j--;
-        }
-        if (j === phrases[i].length) isDeleting = true;
-        if (j === 0 && isDeleting) {
-          isDeleting = false;
-          i = (i + 1) % phrases.length;
-        }
-        setTimeout(loop, isDeleting ? 50 : 100);
-      }
-      loop();
-    });
-  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#resume">Resume</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#resume">Resume</a></li>
-  </ul>
-</nav>
+  <div class="main">
+    <section id="about">
+      <h1>Santhoshi Biradar</h1>
+      <p class="typing" id="typing"></p>
+      <p>Austin, TX | 314-575-7500 | <a href="mailto:your.email@gmail.com">Email</a> | <a href="#">LinkedIn</a></p>
+    </section>
 
-<div class="main">
-  <section id="about">
-    <h1>Santhoshi Biradar</h1>
-    <p class="typing" id="typing"></p>
-    <p>Austin, TX | 314-575-7500 | <a href="mailto:your.email@gmail.com">your.email@gmail.com</a> | <a href="https://linkedin.com/in/YOUR-LINK">LinkedIn</a></p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <div class="skills-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Employability Analytics Dashboard</h3>
-      <p>Built with Power BI, this dashboard visualizes student placement and salary trends. Improved report delivery by 40%.</p>
-      <div class="buttons">
-        <a href="#">View Dashboard</a>
-        <a href="#">Download Report</a>
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <div class="skills-icons">
+        <!-- Skill icons here -->
       </div>
-    </div>
-    <div class="card">
-      <h3>Enterprise Architecture – Doosan Group</h3>
-      <p>Created TOGAF-based enterprise models and agile project flow using JIRA. Presented to a stakeholder group of 200+.</p>
+    </section>
+
+    <section id="projects">
+      <!-- Project cards -->
+    </section>
+
+    <section id="experience">
+      <!-- Experience cards -->
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>Master of Computer Science in Information Systems – Saint Louis University<br />GPA: 3.9 (2023–2025)</p>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
       <div class="buttons">
-        <a href="#">View Case Study</a>
+        <a href="files/Santhoshi-Biradar-Resume.pdf">Download Resume</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Project Manager – Excelerate</h3>
-      <p>Planned and executed virtual global events, managed risk and maintained timely delivery with international teams.</p>
-    </div>
-    <div class="card">
-      <h3>IT Analyst Intern – Amazon</h3>
-      <p>Collaborated on tech documentation, SQL-driven analysis, and software enhancements for internal platforms.</p>
-    </div>
-  </section>
+    <footer>
+      <p>&copy; 2024 Santhoshi Biradar • Portfolio built with HTML, CSS & JS</p>
+    </footer>
+  </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p>Master of Computer Science in Information Systems – Saint Louis University<br>GPA: 3.9 (2023–2025)</p>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <div class="buttons">
-      <a href="files/Santhoshi-Biradar-Resume.pdf">Download Resume</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Santhoshi Biradar • Portfolio built with HTML, CSS & JS</p>
-  </footer>
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
