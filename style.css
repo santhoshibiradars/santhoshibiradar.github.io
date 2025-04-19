@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f1624;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #1e2a38;
+  padding-top: 40px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #00dfd8;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #00dfd8, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  color: #00dfd8;
+  margin-top: 60px;
+}
+
+.card {
+  background-color: #1e2a38;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.skills-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.buttons a {
+  display: inline-block;
+  background: #00dfd8;
+  color: #0f1624;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #ccc;
+}
+
+.typing {
+  font-size: 1.2rem;
+  color: #ccc;
+  height: 25px;
+}
